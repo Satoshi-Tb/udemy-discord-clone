@@ -1,9 +1,13 @@
-import "./App.css";
+import "./App.scss";
+import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   return (
     <>
-      <div></div>
+      <div className="app">
+        <Sidebar />
+        {/* sidebar */}
+      </div>
     </>
   );
 }
