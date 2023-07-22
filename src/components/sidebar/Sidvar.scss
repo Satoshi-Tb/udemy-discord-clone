@@ -2,20 +2,20 @@
   display: flex;
   flex: 0.35;
   height: 100vh;
-  background-color: gray;
+  background-color: #33363d;
 
   .sidebarLeft {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 15px;
-    background-color: black;
+    background-color: #181d1e;
     padding: 7px 15px;
 
     .serverIcon {
       width: 60px;
       height: 60px;
-      background-color: gray;
+      background-color: 33363d;
       border-radius: 9999px;
       margin-bottom: 10px;
       position: relative;
@@ -27,6 +27,19 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
+    }
+  }
+
+  .sidebarRight {
+    background-color: #2c2d34;
+    width: 300px;
+
+    .sidebarTop {
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
     }
   }
 }
