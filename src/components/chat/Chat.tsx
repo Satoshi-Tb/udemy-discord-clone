@@ -8,7 +8,13 @@ export const Chat = () => {
       {/* chatHeader */}
       <ChatHeader />
       {/* chatMessage */}
-      <ChatMessage />
+      <div className="chatMessageList">
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+      </div>
+
       {/* chatFooter */}
       <ChatInput />
     </div>
