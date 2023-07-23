@@ -1,0 +1,32 @@
+.chatInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #474b53;
+  border-radius: 5px;
+  margin: 5px;
+  color: lightgray;
+
+  form {
+    flex-grow: 1;
+    input {
+      padding: 15px;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      font-size: large;
+      width: 100%;
+    }
+    .chatInputButton {
+      display: none; // Enterキー押下アクションだけ残したいので、表示を消す
+    }
+  }
+
+  .chatInputIcons {
+    .MuiSvgIcon-root {
+      padding: 5px;
+    }
+  }
+}

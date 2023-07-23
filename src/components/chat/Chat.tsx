@@ -1,5 +1,5 @@
 import "./Chat.scss";
-import { ChatFooter } from "./ChatFooter";
+import { ChatInput } from "./ChatInput";
 import { ChatHeader } from "./ChatHeader";
 import { ChatMessage } from "./ChatMessage";
 export const Chat = () => {
@@ -10,7 +10,7 @@ export const Chat = () => {
       {/* chatMessage */}
       <ChatMessage />
       {/* chatFooter */}
-      <ChatFooter />
+      <ChatInput />
     </div>
   );
 };
