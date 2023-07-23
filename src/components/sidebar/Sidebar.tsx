@@ -11,10 +11,10 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="sidebarLeft">
         <div className="serverIcon">
-          <img src="../../assets/react.svg" alt="イメージ" />
+          <img src="./vite.svg" alt="イメージ" />
         </div>
         <div className="serverIcon">
-          <img src="../../assets/react.svg" alt="イメージ" />
+          <img src="./vite.svg" alt="イメージ" />
         </div>
       </div>
       <div className="sidebarRight">
@@ -40,7 +40,7 @@ const Sidebar = () => {
 
           <div className="sidebarFooter">
             <div className="sidebarAccount">
-              <img src="./icon.png" alt="アイコン" />
+              <img src="./vite.svg" alt="アイコン" />
               <div className="accountName">
                 <h4>DiscodeTaro</h4>
                 <span>#8162</span>
