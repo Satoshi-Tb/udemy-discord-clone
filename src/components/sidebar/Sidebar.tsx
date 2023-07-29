@@ -5,6 +5,7 @@ import MicIcon from "@mui/icons-material/Mic";
 import HeadphonesIcon from "@mui/icons-material/Headphones";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { SidbarChannel } from "./SidbarChannel";
+import { auth } from "../../firebase";
 
 const Sidebar = () => {
   return (
@@ -40,7 +41,14 @@ const Sidebar = () => {
 
           <div className="sidebarFooter">
             <div className="sidebarAccount">
-              <img src="./vite.svg" alt="アイコン" />
+              <img
+                src="./vite.svg"
+                alt="アイコン"
+                onClick={() => {
+                  console.log("sign out");
+                  auth.signOut();
+                }}
+              />
               <div className="accountName">
                 <h4>DiscodeTaro</h4>
                 <span>#8162</span>
