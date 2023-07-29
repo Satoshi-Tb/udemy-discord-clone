@@ -6,16 +6,20 @@ import HeadphonesIcon from "@mui/icons-material/Headphones";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { SidbarChannel } from "./SidbarChannel";
 import { auth } from "../../firebase";
+import { useAppSelector } from "../../app/hooks";
+import ReactIcon from "../../assets/react.svg";
 
 const Sidebar = () => {
+  const user = useAppSelector((state) => state.user);
+
   return (
     <div className="sidebar">
       <div className="sidebarLeft">
         <div className="serverIcon">
-          <img src="./vite.svg" alt="イメージ" />
+          <img src={ReactIcon} alt="イメージ" />
         </div>
         <div className="serverIcon">
-          <img src="./vite.svg" alt="イメージ" />
+          <img src={ReactIcon} alt="イメージ" />
         </div>
       </div>
       <div className="sidebarRight">
@@ -42,7 +46,7 @@ const Sidebar = () => {
           <div className="sidebarFooter">
             <div className="sidebarAccount">
               <img
-                src="./vite.svg"
+                src={user ? user.photo : ReactIcon}
                 alt="アイコン"
                 onClick={() => {
                   console.log("sign out");
