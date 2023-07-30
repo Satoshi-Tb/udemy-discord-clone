@@ -5,12 +5,17 @@ import PeopleIcon from "@mui/icons-material/People";
 import SearchIcon from "@mui/icons-material/Search";
 import SendIcon from "@mui/icons-material/Send";
 import HelpIcon from "@mui/icons-material/Help";
-export const ChatHeader = () => {
+
+type Prop = {
+  channelName: string;
+};
+
+export const ChatHeader = ({ channelName }: Prop) => {
   return (
     <div className="chatHeader">
       <div className="chatHeaderLeft">
         <div className="chatHeaderHash">
-          <h3>#Udemy</h3>
+          <h3>#{channelName}</h3>
         </div>
       </div>
       <div className="chatHeaderRight">

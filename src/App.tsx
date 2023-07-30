@@ -11,7 +11,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./utils/ErrorFallback";
 
 function App() {
-  const user = useAppSelector((state: RootState) => state.user);
+  const user = useAppSelector((state: RootState) => state.user.user);
 
   const dispatch = useAppDispatch();
 
