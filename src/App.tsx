@@ -7,6 +7,8 @@ import Sidebar from "./components/sidebar/Sidebar";
 import { RootState } from "./app/store";
 import { auth } from "./firebase";
 import { login, logout } from "./features/userSlice";
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorFallback from "./utils/ErrorFallback";
 
 function App() {
   const user = useAppSelector((state: RootState) => state.user);
@@ -35,7 +37,9 @@ function App() {
       <div className="app">
         {user ? (
           <>
-            <Sidebar />
+            <ErrorBoundary FallbackComponent={ErrorFallback} onReset={() => {}}>
+              <Sidebar />
+            </ErrorBoundary>
             <Chat />
           </>
         ) : (
