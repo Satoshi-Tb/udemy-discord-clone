@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 import "./Chat.scss";
 import { ChatInput } from "./ChatInput";
 import { ChatHeader } from "./ChatHeader";
