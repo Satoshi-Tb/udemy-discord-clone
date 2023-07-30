@@ -18,7 +18,7 @@ export const SidbarChannel = ({ id, channel }: Props) => {
       onClick={() =>
         dispatch(
           setChannelInfo({
-            chanelId: id,
+            channelId: id,
             channelName: channel.channel.channelName,
           })
         )

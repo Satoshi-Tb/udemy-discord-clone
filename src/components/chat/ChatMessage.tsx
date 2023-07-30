@@ -1,16 +1,31 @@
+import { Timestamp } from "firebase/firestore";
 import "./ChatMessage.scss";
 import { Avatar } from "@mui/material";
 
-export const ChatMessage = () => {
+type Props = {
+  message: string;
+  timestamp: Timestamp;
+  userName: string;
+  userPhoto: string;
+};
+
+export const ChatMessage = ({
+  message,
+  timestamp,
+  userName,
+  userPhoto,
+}: Props) => {
   return (
     <div className="chatMessage">
-      <Avatar />
+      <Avatar src={userPhoto} />
       <div className="messageInfo">
         <h4>
-          Discord Taro
-          <span className="messageTimestamp">2023/04/03</span>
+          {userName}
+          <span className="messageTimestamp">
+            {new Date(timestamp?.toDate()).toLocaleString()}
+          </span>
         </h4>
-        <p>メッセージ本文</p>
+        <p>{message}</p>
       </div>
     </div>
   );
